@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: sister-saleema-ai
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: MODEL
+        value: gpt-4.1-mini
+      - key: OPENAI_API_KEY
+        sync: false
